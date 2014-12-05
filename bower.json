@@ -1,0 +1,9 @@
+{
+  "name": "largest-triangle-three-buckets",
+  "version": "0.1.0",
+  "dependencies": {},
+  "devDependencies": {
+    "qunit": "~1.12.0"
+  }
+}
+

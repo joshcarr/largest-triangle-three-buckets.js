@@ -34,8 +34,11 @@ module.exports = function(grunt) {
     },
     jshint: {
       jshintrc: '.jshintrc',
-      lib_test: {
+      lib: {
         src: ['lib/{,*/}*.js']
+      },
+      gruntfile: {
+        src: 'Gruntfile.js'
       }
     },
     qunit: {
@@ -46,9 +49,9 @@ module.exports = function(grunt) {
         files: '<%= jshint.gruntfile.src %>',
         tasks: ['jshint:gruntfile']
       },
-      lib_test: {
-        files: '<%= jshint.lib_test.src %>',
-        tasks: ['jshint:lib_test', 'qunit']
+      lib: {
+        files: '<%= jshint.lib.src %>',
+        tasks: ['jshint:lib', 'qunit']
       }
     }
   });

@@ -53,10 +53,14 @@ module.exports = function(grunt) {
         files: '<%= jshint.lib.src %>',
         tasks: ['jshint:lib', 'qunit']
       }
+    },
+    jscs: {
+      src: '<%= jshint.lib.src %>',
+      options: {
+        config: '.jscsrc'
+      }
     }
   });
-
-
 
   // Default task.
   grunt.registerTask('default', ['qunit', 'concat', 'uglify']);
